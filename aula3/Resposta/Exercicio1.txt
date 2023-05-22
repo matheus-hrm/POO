@@ -1,0 +1,97 @@
+
+1.	Uma casa está para uma planta arquitetônica assim com um(a) OBJETO está para uma  classe.
+
+2.	A palavra chave CLASS em uma declaração de classe é imediatamente seguida pelo  nome da classe.
+
+3.	A palavra chave NEW solicita memória do sistema para armazenar um objeto e  então chama o construtor da classe correspondente, que retorna uma referência para o  objeto inicializado.
+
+4.	Um objeto não inicializado tem como valor padrão NULL.
+
+5.	A palavra chave THIS pode ser usada para resolver ambiguidades ao se acessar  variáveis locais e atributos, apontando para a atual instância do objeto.
+
+6.	Quando definimos métodos diferentes com assinaturas diferentes mas nomes iguais,  estamos fazendo uso DE SOBRECARGA DE MÉTODOS.
+
+
+7. O que é um método construtor?
+
+public class exempConstrutor {
+    private String name;
+    private int age;
+    private double height;
+
+    //construtor
+    public exempConstrutor(String name, int age, double height) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+    }
+
+    public static void main(String[] args) {
+        // Instanciando o primeiro objeto com atributos null
+        exempConstrutor objeto1 = new exempConstrutor(null, 0, 0.0);
+
+        // Instanciando o segundo objeto com atributos não null
+        exempConstrutor objeto2 = new exempConstrutor("João", 25, 1.75);
+
+    }
+}
+
+8. Diferencie métodos estáticos de métodos de instância 
+
+public class instanceMethod {
+  private int x;
+
+  public void instanceMethod(int value) {
+    this.x = value;
+  }
+}
+/*  
+    Métodos de instância são associados a uma instância específica de uma classe.
+    Devem ser invocados através de uma instância da classe utilizando o operador ponto.
+    Métodos de instância podem acessar atributos de instância e métodos de instância.
+*/
+
+public class staticMethod {
+  private static int x;
+  
+  public static void contador() {
+    x++;
+  }
+}
+
+/* 
+   Métodos estáticos são associados a própria classe e não tem acesso aos atributos de instância da classe 
+   Podem ser invocados diretamente na classe sem necessidade de instância.
+*/
+
+9. O que é assinatura de um método 
+
+A assinatura de um método é usada pra identificar um método dentro de uma classe, diferenciando de outros métodos com nomes iguais, é utilizada durante a compilação e a execução para verificar a correta invocação e chamada de métodos. Se dois métodos tiverem o mesmo nome e a mesma assinatura, eles serão considerados métodos sobrecarregados.
+
+A assinatura de um método é composta por :
+    Nome do método;
+    Tipos de dados dos parâmetros;
+    Quantidade e ordem de parâmetros;
+
+10. Quais são os quatro tipos de modificadores de acesso?
+
+    Public (Público):
+        O acesso não é restrito.
+        Os elementos declarados como públicos podem ser acessados de qualquer lugar, dentro ou fora da classe.
+        São amplamente utilizados para fornecer uma interface de acesso aos elementos da classe.
+
+    Private (Privado):
+        O acesso é restrito somente à própria classe onde o elemento é declarado.
+        Os elementos privados não podem ser acessados diretamente por outras classes ou objetos.
+        São usados para encapsular detalhes de implementação e ocultar informações sensíveis.
+
+    Protected (Protegido):
+        O acesso é permitido dentro da mesma classe, em subclasses (mesmo que estejam em pacotes diferentes) e em classes do mesmo pacote.
+        Os elementos protegidos não podem ser acessados por classes fora do pacote, a menos que sejam subclasses da classe que os contém.
+        São frequentemente utilizados em herança para permitir que as subclasses acessem certos elementos da classe pai.
+
+    Default (Padrão):
+        O acesso é restrito à própria classe e a outras classes do mesmo pacote.
+        Se nenhum modificador de acesso for especificado, o acesso será considerado como "padrão" ou "pacote".
+        Os elementos com modificador de acesso padrão não podem ser acessados por classes fora do pacote em que estão declarados.
+
