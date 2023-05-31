@@ -1,25 +1,27 @@
 import java.util.Scanner;
 
 public class Pessoa {
-  public String matheusNome;
-  public int ano_nascimento;
-  public String email;
+  private String matheusNome;
+  private int ano_nascimento;
+  private String email;
   Scanner sc = new Scanner(System.in);
 
-  public void Pessoa() {
+  public Pessoa() {
+    System.out.println("Digite seu nome: ");
     matheusNome = sc.nextLine();
+    System.out.println("Digite seu ano de nascimento: ");
     ano_nascimento = sc.nextInt();
+    System.out.println("Digite seu email: ");
     email = sc.nextLine();
   }
 
-  public void Pessoa(String matheusNome, int ano_nascimento, String email) {
-    matheusNome = this.matheusNome; 
-    ano_nascimento = this.ano_nascimento;
-    email = this.email;
+  public Pessoa(String matheusNome, int ano_nascimento, String email) {
+    this.matheusNome = matheusNome;
+    this.ano_nascimento = ano_nascimento;
+    this.email = email;
   }
 
   public String getMatheusNome() {
-    matheusNome = sc.nextLine();
     return matheusNome;
   }
 
@@ -28,7 +30,6 @@ public class Pessoa {
   }
 
   public int getAno_nascimento() {
-    ano_nascimento = sc.nextInt();
     return ano_nascimento;
   }
 
@@ -37,7 +38,6 @@ public class Pessoa {
   }
 
   public String getEmail() {
-    email = sc.nextLine();
     return email;
   }
 

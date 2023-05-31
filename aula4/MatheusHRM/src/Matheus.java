@@ -1,10 +1,17 @@
-public class Matheus {
-  public String identidade;
+public class Matheus extends Pessoa{
+  private String identidade;
 
-  public String getMatheusNome(String nome) {
-    return nome;
+  public Matheus (String matheusNome, int ano_nascimento, String email, String identidade) {
+    super(matheusNome, ano_nascimento, email);
+    identidade = this.identidade;
   }
-  public String getIdentidade(String identidade) {
+  public String getMatheusNome() { 
+    return super.getMatheusNome();
+  }
+  public String getIdentidade() {
     return identidade;
+  }
+  public void setIdentidade(String identidade) {
+    this.identidade = identidade;
   }
 }
