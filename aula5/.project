@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>MatheusHRM</name>
+	<name>MHRMAbstract</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -10,19 +10,13 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>com.umlet.plugin.umletBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>com.umlet.plugin.umletNature</nature>
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1685585176845</id>
+			<id>1685987961553</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

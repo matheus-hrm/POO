@@ -1,0 +1,13 @@
+aluno : Matheus Henrique Rodrigues Magalhaes
+matricula: 202103760
+
+Exercício 1
+
+1. Uma classe abstrata não permite que sejam criados OBJETOS de si
+mesma.
+2. Uma classe concreta não pode ter métodos ABSTRATOS.
+3. Uma interface não pode ter IMPLEMENTAÇÕES nem métodos CONCRETOS dentro
+de sua definição.
+4. Em uma definição de classe, usa-se a palavra chave IMPLEMENTS antes de uma
+lista de interfaces.
+

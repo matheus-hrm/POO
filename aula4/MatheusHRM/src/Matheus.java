@@ -3,7 +3,7 @@ public class Matheus extends Pessoa{
 
   public Matheus (String matheusNome, int ano_nascimento, String email, String identidade) {
     super(matheusNome, ano_nascimento, email);
-    identidade = this.identidade;
+    this.identidade = identidade;
   }
   public String getMatheusNome() { 
     return super.getMatheusNome();

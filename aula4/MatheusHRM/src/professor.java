@@ -1,14 +1,9 @@
-import java.util.Scanner;
 public class Professor extends Pessoa {
   private String matricula;
 
   public Professor (String matheusNome, int ano_nascimento, String email, String matricula) {
     super(matheusNome, ano_nascimento, email);
-    matricula = this.matricula;
-  }
-  public Professor() {
-    super();
-    setMatricula(matricula);
+    this.matricula = matricula;
   }
   protected String getMatricula(){
     return matricula;
@@ -16,7 +11,8 @@ public class Professor extends Pessoa {
   protected void setMatricula(String matricula){
     this.matricula = matricula;
   }
-  public String getNome () {
-    return getMatheusNome();
+  
+  public String getMatheusHRM() {
+    return super.getMatheusNome();
   }
 }

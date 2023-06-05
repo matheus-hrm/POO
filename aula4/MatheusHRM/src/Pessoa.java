@@ -1,18 +1,9 @@
-import java.util.Scanner;
-
 public class Pessoa {
   private String matheusNome;
   private int ano_nascimento;
   private String email;
-  Scanner sc = new Scanner(System.in);
 
   public Pessoa() {
-    System.out.println("Digite seu nome: ");
-    matheusNome = sc.nextLine();
-    System.out.println("Digite seu ano de nascimento: ");
-    ano_nascimento = sc.nextInt();
-    System.out.println("Digite seu email: ");
-    email = sc.nextLine();
   }
 
   public Pessoa(String matheusNome, int ano_nascimento, String email) {

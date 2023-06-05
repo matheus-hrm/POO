@@ -3,26 +3,32 @@ import java.util.Scanner;
 public class TestaMatheus {
   public static void main (String[] args){
 
-    Scanner sc = new Scanner(System.in);
-    
-    Pessoa p1 = new Pessoa();
-    p1.setMatheusNome("Matheus");
-    p1.setAno_nascimento(2003); 
-    p1.setEmail("matheus@email.com");
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Digite o nome: ");
+    String nome = scanner.nextLine();
+
+    System.out.print("Digite o ano de nascimento: ");
+    int anoNascimento = scanner.nextInt();
+    scanner.nextLine(); // Limpar o buffer
+
+    System.out.print("Digite o e-mail: ");
+    String email = scanner.nextLine();
+
+    Pessoa p1 = new Pessoa(nome, anoNascimento, email);
     p1.mensagem();
-    
-    Matheus m1 = new Matheus(null, 0, null, null);
-    m1.setMatheusNome("Matheus");
-    m1.setAno_nascimento(2003);
-    m1.setEmail("");
-    m1.setIdentidade("123456789");
-    m1.mensagem();
-    
-    Professor p2 = new Professor();
-   
-    p2.mensagem("Ola meu nome e " + p2.getMatheusNome() + " e minha matricula e " + p2.getMatricula());
 
+    System.out.print("Digite a matrícula do professor: ");
+    String matricula = scanner.nextLine();
 
+    Professor professor = new Professor(nome, anoNascimento, email, matricula);
+    professor.mensagem("Olá, meu nome é " + professor.getMatheusHRM() + " e eu nasci em " + professor.getAno_nascimento() + " e meu email é " + professor.getEmail() + " e minha matrícula é " + professor.getMatricula());
+
+    System.out.print("Digite a identidade do Matheus: ");
+    String identidade = scanner.nextLine();
+
+    Matheus matheus = new Matheus(nome, anoNascimento, email, identidade);
+    matheus.mensagem("Olá, meu nome é " + matheus.getMatheusNome() + " e eu nasci em " + matheus.getAno_nascimento() + " e meu email é " + matheus.getEmail() + " e minha identidade é " + matheus.getIdentidade());
     
 
   }
